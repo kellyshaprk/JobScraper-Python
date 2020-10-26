@@ -1,7 +1,7 @@
 ## Job Scraper
 
 ### Description
-This scrapes job postings from Indeed and/or StackOverflow then writes the result to a XLSX file.
+This scrapes job postings in Alberta, Canada from Indeed, then displays results immediately and lets you download it.
 <br /><br />
 <b>EDIT (Oct. 25, 2020)</b>
 <br />
