@@ -33,7 +33,10 @@ This scrapes job postings in Alberta, Canada from Indeed then displays results r
 You can check the results on the browser and download a CSV file.
 <br />
 The CSV file has 4 columns; title, company, location, and link.
-
+<br /><br />
+<b>Initial Development </b>
+<br />
+This scrapes job postings from Indeed and/or StackOverflow then writes the result to a CSV file.
 
 ### Skills
 It uses Python, html.
