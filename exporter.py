@@ -24,10 +24,10 @@ def save_to_file(word, jobs):
   cell_format.set_pattern(1)
   cell_format.set_bg_color("yellow")
 
-  sheet.set_column("A:A", 20)
-  sheet.set_column("B:B", 20)
+  sheet.set_column("A:A", 30)
+  sheet.set_column("B:B", 30)
   sheet.set_column("C:C", 15)
-  sheet.set_column("D:D", 50)
+  sheet.set_column("D:D", 40)
   sheet.write("A1", "Title", title_format)
   sheet.write("B1", "Company", title_format)
   sheet.write("C1", "Location", title_format)
@@ -35,20 +35,13 @@ def save_to_file(word, jobs):
 
   sheet.freeze_panes(1, 0)
 
-  
-
   for i in range (0, len(jobs), 1):
     
-    '''
-    sheet.write(i+1, 1, jobs[i].title.values())
-    print(jobs[i])
-    print(jobs[i].title)
-    print(jobs[i].title.values())
-    
-    sheet.write(i+1, 2, jobs[i].company.values())
-    sheet.write(i+1, 2, jobs[i].location.values())
-    sheet.write(i+1, 2, jobs[i].link.values())
-    '''
+    sheet.write(i+1, 0, jobs[i].get('title'))
+    sheet.write(i+1, 1, jobs[i].get('company'))
+    sheet.write(i+1, 2, jobs[i].get('location'))
+    sheet.write(i+1, 3, jobs[i].get('link'))
+
 
   wb.close()
 
