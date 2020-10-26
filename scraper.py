@@ -34,6 +34,7 @@ def extract_indeed_jobs(last_page, url):
     result = requests.get(f"{url}&start={page*limit}")
     soup = BeautifulSoup(result.text, "html.parser")
     results = soup.find_all("div", {"class": "jobsearch-SerpJobCard"})
+
     for result in results:
       job = extract_jobs(result)
       jobs.append(job)

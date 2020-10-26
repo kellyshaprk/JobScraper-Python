@@ -58,8 +58,8 @@ def export():
       raise Exception()
 
     save_to_file(word, jobs)
-    file_name = f"jobSearch_{word}.csv"
-    return send_file(file_name, mimetype='application/x-csv', attachment_filename=file_name, as_attachment=True, cache_timeout=0)
+    file_name = f"jobSearch_{word}.xlsx"
+    return send_file(file_name, mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', attachment_filename=file_name, as_attachment=True, cache_timeout=0)
 
   except:
     return redirect("/")   
